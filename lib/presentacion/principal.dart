@@ -1,7 +1,11 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/presentacion/agregar_libro.dart';
+import 'package:flutter_application_1/presentacion/agregar_usuario.dart';
+import 'package:flutter_application_1/presentacion/libros_no_devueltos.dart';
 import 'package:flutter_application_1/presentacion/mostrar_libros.dart';
+import 'package:flutter_application_1/presentacion/mostrar_usuario.dart';
 
 class Principal extends StatelessWidget {
   const Principal({super.key});
@@ -43,18 +47,35 @@ class Principal extends StatelessWidget {
                 height: 10,
               ),
               ElevatedButton(
-                  onPressed: () {}, child: const Text("agregar libro")),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const CrearLibroPage()));
+                  },
+                  child: const Text("agregar libro")),
               const SizedBox(
                 height: 10,
               ),
               ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const DevolverUsuarioPage()));
+                  },
                   child: const Text("mostrar todos los usuarios")),
               const SizedBox(
                 height: 10,
               ),
               ElevatedButton(
-                  onPressed: () {}, child: const Text("agregar usuario")),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const CrearUsuarioPage()));
+                  },
+                  child: const Text("agregar usuario")),
               const SizedBox(
                 height: 10,
               ),
@@ -65,13 +86,23 @@ class Principal extends StatelessWidget {
                 height: 10,
               ),
               ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const DevolverUsuarioPage()));
+                  },
                   child: const Text("registrar la devolucion de un libro")),
               const SizedBox(
                 height: 10,
               ),
               ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const LibrosFaltantesPage()));
+                  },
                   child: const Text("mostrar todo los libros no devueltos")),
               const SizedBox(
                 height: 10,
